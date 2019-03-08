@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar/Navbar.jsx';
+import { Route } from 'react-router-dom';
+import Gallery from './components/Gallery/Gallery.jsx';
+
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      appName: 'Bag Shop',
+      bags: [
+        {
+          pic: 'https://pp.userapi.com/c7007/v7007416/6b39d/ccboMsiNnjs.jpg',
+          brand: 'Christian Dior'
+        },
+        {
+          pic: 'https://pp.userapi.com/c7007/v7007416/6b3c1/qKkse8QmZ3k.jpg',
+          brand: 'Christian Dior'
+        },
+        {
+          pic: 'https://pp.userapi.com/c7007/v7007416/6b3b8/vjlGQYRihuY.jpg',
+          brand: 'Christian Dior'
+        }
+      ]
+    }
+  }
+
   render() {
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <>
+          <Navbar appName={this.state.appName}/>
+          <Route exact path="/"
+                 render={(props) => <Gallery bags={this.state.bags}/>}/>
+        </>
     );
   }
 }

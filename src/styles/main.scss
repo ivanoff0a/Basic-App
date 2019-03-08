@@ -1,0 +1,59 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+section {
+  margin-bottom: 20px;
+}
+
+.sex {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.baglist__container {
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.bag__container {
+}
+
+.form__container {
+  width: 290px;
+}
+
+@media (min-width: 375px) {
+  .form__container {
+    width: 345px;
+  }
+}
+
+@media (min-width: 425px) {
+  .form__container {
+    width: 395px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form__container {
+    width: 420px;
+  }
+}
+
+.bag__item {
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+
+.heropics__item img{
+  background-size: cover;
+  height: 200px;
+  padding: 20px;
+}
