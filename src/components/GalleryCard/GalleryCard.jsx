@@ -8,7 +8,7 @@ export default class GalleryCard extends Component{
                     <img src={this.props.data.pic} className="card-img-top" alt=""/>
                     <div className="card-body">
                         <h5 className="card-title">{this.props.data.brand}</h5>
-                        <p className="card-text">Saddle Dior Oblique</p>
+                        <p className="card-text">{this.props.data.desc}</p>
                         <a href="#" className="btn btn-primary">Show</a>
                     </div>
                 </div>
